@@ -36,7 +36,8 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ["DEBUG"] == "True" else False
 
-ALLOWED_HOSTS = ['core-api.us-west-2.elasticbeanstalk.com', '127.0.0.1', 'core.seulsale.com', 'localhost', '172.31.60.102']
+ALLOWED_HOSTS = ['*']
+
 
 # Application definition
 
