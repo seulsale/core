@@ -17,6 +17,7 @@ django-dotenv = "*"
 coverage = "*"
 pandas = "*"
 numpy = "*"
+sentry-sdk = "*"
 
 [requires]
 python_version = "3.7"
