@@ -5,3 +5,4 @@ class COVIDData(models.Model):
     confirmed = models.IntegerField()
     deaths = models.IntegerField()
     recovered = models.IntegerField()
+    date = models.DateField()

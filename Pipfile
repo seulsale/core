@@ -15,6 +15,7 @@ gunicorn = "*"
 psycopg2 = "*"
 django-dotenv = "*"
 coverage = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.7"
