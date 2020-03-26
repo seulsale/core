@@ -36,7 +36,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ["DEBUG"] == "True" else False
 
-ALLOWED_HOSTS = ['core-dev2.us-west-2.elasticbeanstalk.com', '127.0.0.1']
+ALLOWED_HOSTS = ['core-dev2.us-west-2.elasticbeanstalk.com', '127.0.0.1', 'core.seulsale.com']
 
 # Application definition
 
@@ -126,7 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# SECURE_SSL_REDIRECT = False if os.environ["DEBUG"] == "True" else True
+SECURE_SSL_REDIRECT = False if os.environ["DEBUG"] == "True" else True
 
 CORS_ORIGIN_WHITELIST = [
     'https://seulsale.com',
