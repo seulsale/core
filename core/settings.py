@@ -132,3 +132,5 @@ CORS_ORIGIN_WHITELIST = [
     'https://seulsale.com',
     'http://localhost:3000',
 ]
+
+APPEND_SLASH = False
