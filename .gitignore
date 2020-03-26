@@ -218,3 +218,8 @@ modules.xml
 
 # End of https://www.gitignore.io/api/django,pycharm+all,visualstudiocode
 
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
