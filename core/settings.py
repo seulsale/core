@@ -36,7 +36,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ["DEBUG"] == "True" else False
 
-ALLOWED_HOSTS = ['core-dev2.us-west-2.elasticbeanstalk.com', '127.0.0.1', 'core.seulsale.com', '54.69.26.132']
+ALLOWED_HOSTS = ['core-api.us-west-2.elasticbeanstalk.com', '127.0.0.1', 'core.seulsale.com', 'localhost', '172.31.60.102']
 
 # Application definition
 
@@ -126,11 +126,24 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-SECURE_SSL_REDIRECT = False if os.environ["DEBUG"] == "True" else True
-
 CORS_ORIGIN_WHITELIST = [
     'https://seulsale.com',
     'http://localhost:3000',
 ]
 
 APPEND_SLASH = False
+
+CORS_REPLACE_HTTPS_REFERER      = True
+HOST_SCHEME                     = "https://"
+SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT             = True
+SESSION_COOKIE_SECURE           = True
+CSRF_COOKIE_SECURE              = True
+SECURE_HSTS_PRELOAD             = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
+SECURE_HSTS_SECONDS             = 1000000
+SECURE_FRAME_DENY               = True
+
+SECURE_CONTENT_TYPE_NOSNIFF     = True
+SECURE_BROWSER_XSS_FILTER       = True
+X_FRAME_OPTIONS                 = 'DENY'
