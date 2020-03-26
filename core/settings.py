@@ -39,6 +39,7 @@ DEBUG = True if os.environ["DEBUG"] == "True" else False
 
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_ALLOW_ALL=True
 
 # Application definition
 
@@ -133,6 +134,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CORS_ORIGIN_ALLOW_ALL = True
-
-SECURE_SSL_REDIRECT = False if os.environ["DEBUG"] == "True" else True
+# SECURE_SSL_REDIRECT = False if os.environ["DEBUG"] == "True" else True
